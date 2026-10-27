@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Matoshri Ladies Garment Collection — kurtis, denim, tops and occasion wear.">
+  <title>Matoshri Ladies Garment Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">25% OFF on all styles · Welcome to Matoshri</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Matoshri home">
+      <img class="brand-logo" src="images/matoshri-logo.svg" alt="Matoshri logo">
+      <span><strong>Matoshri</strong><small>LADIES GARMENT COLLECTION</small></span>
+    </a>
+    <form id="searchForm" class="search-form" role="search">
+      <span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search kurtis, jeans, tops..." aria-label="Search products">
+      <button type="submit">Search</button>
+    </form>
+    <div class="header-actions">
+      <a class="text-button" href="recolor.html" style="text-decoration:none">Dress Color Studio</a><button class="text-button" id="adminOpen" type="button">Admin</button>
+      <button class="bag-button" id="cartOpen" type="button" aria-label="Open shopping bag">Bag <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR STYLE, YOUR STORY</p>
+        <h1>Wear what makes<br><em>you feel beautiful.</em></h1>
+        <p class="hero-text">Everyday essentials, effortless denim and outfits made for your special moments.</p>
+        <a class="primary-button hero-cta" href="#shop">Explore the collection <span>↗</span></a>
+        <div class="hero-note"><span class="note-dot"></span> Thoughtful styles for every day</div>
+      </div>
+      <div class="hero-image" role="img" aria-label="Women's fashion collection">
+        <div class="hero-stamp"><span>MADE FOR</span><strong>your<br>moment</strong><span>MATOSHRI EDIT</span></div>
+      </div>
+      <div class="hero-side-label">NEW SEASON · NEW YOU</div>
+    </section>
+
+    <div class="offer-banner"><span>MATOSHRI SPECIAL OFFER</span><strong>25% OFF</strong><span>on all products · Limited-time offer</span></div>
+
+    <section class="benefits" aria-label="Store highlights">
+      <div><span>✳</span><strong>Everyday favourites</strong><small>Styles you’ll reach for</small></div>
+      <div><span>◇</span><strong>Sizes for your style</strong><small>Check sizes on each item</small></div>
+      <div><span>♡</span><strong>Personal service</strong><small>Order with us on WhatsApp</small></div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE MATOSHRI EDIT</p><h2>Find your new favourite.</h2></div>
+        <p>Looks for slow mornings, busy days<br>and unforgettable evenings.</p>
+      </div>
+      <div class="category-pills" aria-label="Shop categories">
+        <button class="category-pill active" data-category="All" type="button">All styles</button>
+        <button class="category-pill" data-category="Tops" type="button">Tops</button>
+        <button class="category-pill" data-category="T-Shirts" type="button">T-Shirts</button>
+        <button class="category-pill" data-category="Kurtis" type="button">Kurtis</button>
+        <button class="category-pill" data-category="Office Wear" type="button">Office Wear</button>
+        <button class="category-pill" data-category="Party Wear" type="button">Party Wear</button>
+        <button class="category-pill" data-category="Anarkali" type="button">Anarkali</button>
+        <button class="category-pill" data-category="Jeans" type="button">Jeans</button>
+      </div>
+      <div class="filters">
+        <label>Category
+          <select id="categoryFilter">
+            <option>All</option><option>Tops</option><option>T-Shirts</option><option>Kurtis</option><option>Office Wear</option><option>Party Wear</option><option>Anarkali</option><option>Jeans</option>
+          </select>
+        </label>
+        <label>Colour
+          <select id="colorFilter">
+            <option>All</option><option>Dusty Pink</option><option>Olive Green</option><option>Black</option><option>Blue</option><option>Red</option><option>Wine</option><option>Ivory</option><option>Teal</option><option>Green</option><option>Mauve</option><option>Mint Green</option><option>White</option><option>Pink</option><option>Grey</option><option>Yellow</option><option>Mustard</option><option>Navy Blue</option>
+          </select>
+        </label>
+        <label class="price-filter">Max price <span id="priceValue">₹2,000</span>
+          <input id="priceFilter" type="range" min="350" max="2000" step="50" value="2000">
+        </label>
+        <label>Sort by
+          <select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name A–Z</option></select>
+        </label>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="emptyState" class="empty-state hidden"><span>♡</span><h3>No styles found</h3><p>Try changing your search or filters.</p></div>
+    </section>
+
+    <section class="whatsapp-banner">
+      <div><p class="eyebrow">A LITTLE HELP GOES A LONG WAY</p><h2>Need help choosing?</h2><p>Message us on WhatsApp for product and order assistance.</p></div>
+      <a class="secondary-button" href="https://wa.me/917218236483" target="_blank" rel="noopener">Chat with us ↗</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><img class="brand-logo" src="images/matoshri-logo.svg" alt="Matoshri logo"><span><strong>Matoshri</strong><small>LADIES GARMENT COLLECTION</small></span></a>
+    <p>Shop No. 14, Dindoli Road, Surat · WhatsApp: 72182 36483</p>
+    <span>© <span id="year"></span> Matoshri Ladies Garment Collection</span>
+  </footer>
+
+  <div id="productOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Product details">
+    <div class="modal product-modal"><button class="modal-close" data-close="productOverlay" aria-label="Close" type="button">×</button><div id="productDetail"></div></div>
+  </div>
+  <div id="cartOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Shopping bag">
+    <div class="modal side-modal"><button class="modal-close" data-close="cartOverlay" aria-label="Close" type="button">×</button><p class="eyebrow">YOUR SELECTION</p><h2>Your shopping bag</h2><div id="cartItems" class="cart-items"></div><div class="cart-summary"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div><p class="tiny-note">Delivery charges and availability will be confirmed on WhatsApp.</p><button id="checkoutOpen" class="primary-button full-button" type="button">Continue to checkout →</button></div>
+  </div>
+  <div id="checkoutOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Checkout">
+    <div class="modal checkout-modal"><button class="modal-close" data-close="checkoutOverlay" aria-label="Close" type="button">×</button><p class="eyebrow">ALMOST YOURS</p><h2>Delivery details</h2><p class="muted">Submitting opens WhatsApp with your order details. Review and press Send in WhatsApp to place your order.</p>
+      <form id="checkoutForm" class="checkout-form">
+        <label>Full name<input name="name" required autocomplete="name" placeholder="Your name"></label>
+        <label>Mobile number<input name="phone" required inputmode="tel" pattern="[0-9+() -]{8,18}" autocomplete="tel" placeholder="Your phone number"></label>
+        <label>Delivery address<textarea name="address" required rows="3" autocomplete="street-address" placeholder="House, street, area, city and PIN code"></textarea></label>
+        <label>Payment preference<select name="payment" required><option value="Cash on delivery (confirm with store)">Cash on delivery (confirm with store)</option><option value="UPI (confirm with store)">UPI (confirm with store)</option></select></label>
+        <button class="primary-button full-button" type="submit">Prepare WhatsApp order ↗</button>
+      </form>
+    </div>
+  </div>
+  <div id="adminOverlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Store admin">
+    <div class="modal admin-modal"><button class="modal-close" data-close="adminOverlay" aria-label="Close" type="button">×</button>
+      <div id="adminLogin"><p class="eyebrow">STORE MANAGEMENT</p><h2>Admin sign in</h2><p class="muted">Demo only: this password is visible in the JavaScript and is not secure for a live store.</p><form id="adminLoginForm" class="checkout-form"><label>Demo password<input name="password" type="password" required placeholder="Enter demo password"></label><button class="primary-button full-button" type="submit">Sign in</button></form></div>
+      <div id="adminDashboard" class="hidden"><div class="admin-title"><div><p class="eyebrow">STORE MANAGEMENT</p><h2>Manage products</h2></div><button id="adminLogout" class="secondary-button" type="button">Log out</button></div>
+        <form id="productForm" class="checkout-form admin-product-form">
+          <input name="id" type="hidden">
+          <label>Product name<input name="name" required maxlength="100" placeholder="Product name"></label>
+          <label>Category<select name="category" required><option>Tops</option><option>T-Shirts</option><option>Kurtis</option><option>Office Wear</option><option>Party Wear</option><option>Anarkali</option><option>Jeans</option></select></label>
+          <label>Price (₹350–₹2,000)<input name="price" type="number" min="350" max="2000" required></label>
+          <label>Colours (comma separated)<input name="colors" required placeholder="Blue, Black, Ivory"></label>
+          <label>Sizes (comma separated)<input name="sizes" required placeholder="S, M, L, XL"></label>
+          <label>Choose product photo from your computer<input name="imageFile" type="file" accept="image/*"><small class="muted">Select a photo from your gallery. The image is saved in this browser.</small><input name="image" type="hidden"><img id="adminImagePreview" class="admin-image-preview hidden" alt="Selected product preview"></label>
+          <label>Description<textarea name="description" rows="2" placeholder="Short product description"></textarea></label>
+          <div class="admin-form-actions"><button class="primary-button" type="submit">Save product</button><button id="resetProductForm" class="secondary-button" type="button">Clear form</button></div>
+        </form>
+        <div id="adminProductList" class="admin-product-list"></div>
+        <button id="resetDemo" class="reset-demo" type="button">Restore sample products</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
